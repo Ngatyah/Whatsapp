@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Phone_Login_Activity">
+
+    <EditText
+        android:id="@+id/phone_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Phone Number.."
+        android:textAllCaps="false"
+        android:layout_marginStart="17dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/inputs"
+        android:padding="5dp"
+        android:textSize="20sp"
+        android:drawableStart="@drawable/phone"
+        android:textAlignment="center"
+
+        />
+
+
+    <EditText
+        android:id="@+id/verification_code_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Verification Code "
+        android:textAllCaps="false"
+        android:layout_marginStart="17dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/inputs"
+        android:layout_below="@+id/phone_input"
+        android:padding="5dp"
+        android:textSize="20sp"
+        android:drawableStart="@drawable/password"
+        android:textAlignment="center"
+        android:visibility="invisible"
+
+        />
+
+
+    <Button
+        android:id="@+id/send_verification_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Verification Code "
+        android:textAllCaps="false"
+        android:layout_marginStart="17dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginTop="20dp"
+        android:text="Send Verifacation Code"
+        android:background="@drawable/button"
+        android:layout_below="@+id/verification_code_input"
+        android:padding="5dp"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        android:textStyle="bold"
+
+        />
+
+
+    <Button
+        android:id="@+id/confirm_verification_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Verification Code "
+        android:textAllCaps="false"
+        android:layout_marginStart="17dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginTop="2dp"
+        android:text="Verify"
+        android:background="@drawable/button"
+        android:layout_below="@+id/send_verification_button"
+        android:padding="5dp"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        android:textStyle="bold"
+        android:visibility="invisible"
+
+        />
+
+</RelativeLayout>

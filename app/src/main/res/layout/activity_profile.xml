@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/profile_activity"
+    tools:context=".ProfileActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/visit_profile_image"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        android:src="@drawable/profile_image"
+
+        />
+
+    <TextView
+        android:id="@+id/visit_user_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/visit_profile_image"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="User Name"
+        android:textAllCaps="false"/>
+
+
+    <TextView
+        android:id="@+id/visit_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/visit_user_name"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:text="Hey am using Tinga App..."
+        android:textAllCaps="false"/>
+
+
+    <Button
+        android:id="@+id/visit_request_send_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/visit_status"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="30dp"
+        android:textAlignment="center"
+        android:background="@drawable/button"
+        android:textSize="25dp"
+        android:text="Send Message"
+        android:textAllCaps="false"
+        android:textColor="@android:color/background_light"
+        />
+
+
+
+
+
+</RelativeLayout>

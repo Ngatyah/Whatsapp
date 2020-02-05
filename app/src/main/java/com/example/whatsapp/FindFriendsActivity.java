@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
@@ -53,7 +54,7 @@ public class FindFriendsActivity extends AppCompatActivity {
 
 
     @Override
-    protected void onStart() {
+        protected void onStart() {
         super.onStart();
 
         FirebaseRecyclerOptions<Contacts> options =
@@ -69,6 +70,7 @@ public class FindFriendsActivity extends AppCompatActivity {
                     {
                         holder.username.setText(model.getName());
                         holder.userStatus.setText(model.getStatus());
+
                         Picasso.get().load(model.getImage()).placeholder(R.drawable.profile_image).into(holder.userProfileImage);
 
 
@@ -78,12 +80,16 @@ public class FindFriendsActivity extends AppCompatActivity {
                             @Override
                             public void onClick(View v)
                             {
-                                String visit_user_id= getRef(position).getKey();
+
+                                String visitUserId= getRef(position).getKey();
+
+//                                Toast.makeText(FindFriendsActivity.this,"Key: "+visitUserId,Toast.LENGTH_SHORT).show();
+
 
                                 Intent profileIntent = new Intent(FindFriendsActivity.this,ProfileActivity.class);
-                                getIntent().putExtra("visit_user_id", visit_user_id);
+                                profileIntent.putExtra("visitUserId", visitUserId);
                                 startActivity(profileIntent);
-
+//
                             }
                         });
                     }

@@ -13,13 +13,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ProfileActivity"></activity>
+        <activity android:name=".Custom_Chat_Activity"></activity>
+        <activity android:name=".ChatActivity" />
+        <activity android:name=".ProfileActivity" />
         <activity
             android:name=".FindFriendsActivity"
             android:parentActivityName=".MainActivity" />
         <activity android:name=".Phone_Login_Activity" />
         <activity android:name=".GroupChatActivity" />
-        <activity android:name=".SettingsActivity" />
+        <activity
+            android:name=".SettingsActivity"
+            android:parentActivityName=".MainActivity" />
         <activity android:name=".RegisterActivity" />
         <activity
             android:name="com.theartofdev.edmodo.cropper.CropImageActivity"

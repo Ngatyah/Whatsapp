@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
+import androidx.appcompat.widget.Toolbar;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -47,6 +48,8 @@ public class SettingsActivity extends AppCompatActivity {
     private final static int gallareyPick=1;
     private StorageReference userProfileImageReference;
     private ProgressDialog loadingbar;
+
+    private  Toolbar mySettingToolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -97,6 +100,15 @@ public class SettingsActivity extends AppCompatActivity {
         userProfileImage=(CircleImageView) findViewById(R.id.set_profile_image);
         loadingbar=new ProgressDialog(this);
 
+
+
+        mySettingToolbar=(Toolbar)findViewById(R.id.setting_toolBar);
+        setSupportActionBar(mySettingToolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setTitle("Account Settings");
+
+
     }
 
     @Override
@@ -124,7 +136,7 @@ public class SettingsActivity extends AppCompatActivity {
             if(resultCode== RESULT_OK)
             {
                 loadingbar.setTitle(" Profile Pic Updating");
-                loadingbar.setMessage("Pleae wait as we Update your profile....");
+                loadingbar.setMessage("Please wait as we Update your profile....");
                 loadingbar.setCanceledOnTouchOutside(false);
                 loadingbar.show();
                 Uri resultUri = result.getUri();
@@ -196,12 +208,12 @@ public class SettingsActivity extends AppCompatActivity {
         else
         {
 
-            HashMap<String,String>profileMap=new HashMap<>();
+            HashMap<String,Object>profileMap=new HashMap<>();
             profileMap.put("uid",currentUserID);
             profileMap.put("name",setUserName);
             profileMap.put("status",setUserStatus);
 
-            rootRef.child("Users").child(currentUserID).setValue(profileMap)
+            rootRef.child("Users").child(currentUserID).updateChildren(profileMap)
                     .addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task)

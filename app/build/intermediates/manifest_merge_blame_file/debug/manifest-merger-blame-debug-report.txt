@@ -1,0 +1,163 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.whatsapp"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="19"
+8-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="29" />
+9-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/src/main/AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/src/main/AndroidManifest.xml:5:5-67
+11-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/src/main/AndroidManifest.xml:5:22-64
+12    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+12-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/src/main/AndroidManifest.xml:6:5-80
+12-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/src/main/AndroidManifest.xml:6:22-77
+13    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+13-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/src/main/AndroidManifest.xml:7:5-81
+13-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/src/main/AndroidManifest.xml:7:22-78
+14    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+14-->[com.google.firebase:firebase-storage:16.0.4] /home/ngatyah/.gradle/caches/transforms-2/files-2.1/9675af03a15e9f81430a0ec3f3dfbec4/jetified-firebase-storage-16.0.4/AndroidManifest.xml:23:5-79
+14-->[com.google.firebase:firebase-storage:16.0.4] /home/ngatyah/.gradle/caches/transforms-2/files-2.1/9675af03a15e9f81430a0ec3f3dfbec4/jetified-firebase-storage-16.0.4/AndroidManifest.xml:23:22-76
+15
+16    <application
+16-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/src/main/AndroidManifest.xml:9:5-39:19
+17        android:allowBackup="true"
+17-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/src/main/AndroidManifest.xml:10:9-35
+18        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+18-->[androidx.core:core:1.0.1] /home/ngatyah/.gradle/caches/transforms-2/files-2.1/16eb53875ba78320b1fcf5cac2c4c8c7/core-1.0.1/AndroidManifest.xml:22:18-86
+19        android:debuggable="true"
+20        android:icon="@mipmap/ic_launcher"
+20-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/src/main/AndroidManifest.xml:11:9-43
+21        android:label="@string/app_name"
+21-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/src/main/AndroidManifest.xml:12:9-41
+22        android:roundIcon="@mipmap/ic_launcher_round"
+22-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/src/main/AndroidManifest.xml:13:9-54
+23        android:supportsRtl="true"
+23-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/src/main/AndroidManifest.xml:14:9-35
+24        android:testOnly="true"
+25        android:theme="@style/AppTheme" >
+25-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/src/main/AndroidManifest.xml:15:9-40
+26        <activity android:name="com.example.whatsapp.Custom_Chat_Activity" />
+26-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/src/main/AndroidManifest.xml:16:9-67
+26-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/src/main/AndroidManifest.xml:16:19-55
+27        <activity android:name="com.example.whatsapp.ChatActivity" />
+27-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/src/main/AndroidManifest.xml:17:9-50
+27-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/src/main/AndroidManifest.xml:17:19-47
+28        <activity android:name="com.example.whatsapp.ProfileActivity" />
+28-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/src/main/AndroidManifest.xml:18:9-53
+28-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/src/main/AndroidManifest.xml:18:19-50
+29        <activity
+29-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/src/main/AndroidManifest.xml:19:9-21:58
+30            android:name="com.example.whatsapp.FindFriendsActivity"
+30-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/src/main/AndroidManifest.xml:20:13-48
+31            android:parentActivityName="com.example.whatsapp.MainActivity" />
+31-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/src/main/AndroidManifest.xml:21:13-55
+32        <activity android:name="com.example.whatsapp.Phone_Login_Activity" />
+32-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/src/main/AndroidManifest.xml:22:9-58
+32-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/src/main/AndroidManifest.xml:22:19-55
+33        <activity android:name="com.example.whatsapp.GroupChatActivity" />
+33-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/src/main/AndroidManifest.xml:23:9-55
+33-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/src/main/AndroidManifest.xml:23:19-52
+34        <activity
+34-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/src/main/AndroidManifest.xml:24:9-26:58
+35            android:name="com.example.whatsapp.SettingsActivity"
+35-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/src/main/AndroidManifest.xml:25:13-45
+36            android:parentActivityName="com.example.whatsapp.MainActivity" />
+36-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/src/main/AndroidManifest.xml:26:13-55
+37        <activity android:name="com.example.whatsapp.RegisterActivity" />
+37-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/src/main/AndroidManifest.xml:27:9-54
+37-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/src/main/AndroidManifest.xml:27:19-51
+38        <activity
+38-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/src/main/AndroidManifest.xml:28:9-30:59
+39            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+39-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/src/main/AndroidManifest.xml:29:13-76
+40            android:theme="@style/Base.Theme.AppCompat" />
+40-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/src/main/AndroidManifest.xml:30:13-56
+41        <activity android:name="com.example.whatsapp.LoginActivity" />
+41-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/src/main/AndroidManifest.xml:31:9-51
+41-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/src/main/AndroidManifest.xml:31:19-48
+42        <activity android:name="com.example.whatsapp.MainActivity" >
+42-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/src/main/AndroidManifest.xml:32:9-38:20
+42-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/src/main/AndroidManifest.xml:32:19-47
+43            <intent-filter>
+43-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/src/main/AndroidManifest.xml:33:13-37:29
+44                <action android:name="android.intent.action.MAIN" />
+44-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/src/main/AndroidManifest.xml:34:17-69
+44-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/src/main/AndroidManifest.xml:34:25-66
+45
+46                <category android:name="android.intent.category.LAUNCHER" />
+46-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/src/main/AndroidManifest.xml:36:17-77
+46-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/src/main/AndroidManifest.xml:36:27-74
+47            </intent-filter>
+48        </activity>
+49        <activity
+49-->[com.google.firebase:firebase-auth:16.0.5] /home/ngatyah/.gradle/caches/transforms-2/files-2.1/441915cca8e6e64aafac7a203e43437c/jetified-firebase-auth-16.0.5/AndroidManifest.xml:24:9-31:50
+50            android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
+50-->[com.google.firebase:firebase-auth:16.0.5] /home/ngatyah/.gradle/caches/transforms-2/files-2.1/441915cca8e6e64aafac7a203e43437c/jetified-firebase-auth-16.0.5/AndroidManifest.xml:25:13-85
+51            android:excludeFromRecents="true"
+51-->[com.google.firebase:firebase-auth:16.0.5] /home/ngatyah/.gradle/caches/transforms-2/files-2.1/441915cca8e6e64aafac7a203e43437c/jetified-firebase-auth-16.0.5/AndroidManifest.xml:26:13-46
+52            android:exported="true"
+52-->[com.google.firebase:firebase-auth:16.0.5] /home/ngatyah/.gradle/caches/transforms-2/files-2.1/441915cca8e6e64aafac7a203e43437c/jetified-firebase-auth-16.0.5/AndroidManifest.xml:27:13-36
+53            android:launchMode="singleTask"
+53-->[com.google.firebase:firebase-auth:16.0.5] /home/ngatyah/.gradle/caches/transforms-2/files-2.1/441915cca8e6e64aafac7a203e43437c/jetified-firebase-auth-16.0.5/AndroidManifest.xml:28:13-44
+54            android:permission="com.google.firebase.auth.api.gms.permission.LAUNCH_FEDERATED_SIGN_IN"
+54-->[com.google.firebase:firebase-auth:16.0.5] /home/ngatyah/.gradle/caches/transforms-2/files-2.1/441915cca8e6e64aafac7a203e43437c/jetified-firebase-auth-16.0.5/AndroidManifest.xml:29:13-102
+55            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+55-->[com.google.firebase:firebase-auth:16.0.5] /home/ngatyah/.gradle/caches/transforms-2/files-2.1/441915cca8e6e64aafac7a203e43437c/jetified-firebase-auth-16.0.5/AndroidManifest.xml:30:13-72
+56
+57        <service
+57-->[com.google.firebase:firebase-auth:16.0.5] /home/ngatyah/.gradle/caches/transforms-2/files-2.1/441915cca8e6e64aafac7a203e43437c/jetified-firebase-auth-16.0.5/AndroidManifest.xml:33:9-39:19
+58            android:name="com.google.firebase.components.ComponentDiscoveryService"
+58-->[com.google.firebase:firebase-auth:16.0.5] /home/ngatyah/.gradle/caches/transforms-2/files-2.1/441915cca8e6e64aafac7a203e43437c/jetified-firebase-auth-16.0.5/AndroidManifest.xml:34:13-84
+59            android:exported="false" >
+59-->[com.google.firebase:firebase-auth:16.0.5] /home/ngatyah/.gradle/caches/transforms-2/files-2.1/441915cca8e6e64aafac7a203e43437c/jetified-firebase-auth-16.0.5/AndroidManifest.xml:35:13-37
+60            <meta-data
+60-->[com.google.firebase:firebase-auth:16.0.5] /home/ngatyah/.gradle/caches/transforms-2/files-2.1/441915cca8e6e64aafac7a203e43437c/jetified-firebase-auth-16.0.5/AndroidManifest.xml:36:13-38:85
+61                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+61-->[com.google.firebase:firebase-auth:16.0.5] /home/ngatyah/.gradle/caches/transforms-2/files-2.1/441915cca8e6e64aafac7a203e43437c/jetified-firebase-auth-16.0.5/AndroidManifest.xml:37:17-109
+62                android:value="com.google.firebase.components.ComponentRegistrar" />
+62-->[com.google.firebase:firebase-auth:16.0.5] /home/ngatyah/.gradle/caches/transforms-2/files-2.1/441915cca8e6e64aafac7a203e43437c/jetified-firebase-auth-16.0.5/AndroidManifest.xml:38:17-82
+63        </service>
+64
+65        <provider
+65-->[com.squareup.picasso:picasso:2.71828] /home/ngatyah/.gradle/caches/transforms-2/files-2.1/0e4241badfc9a432682117a641c11080/jetified-picasso-2.71828/AndroidManifest.xml:8:9-11:40
+66            android:name="com.squareup.picasso.PicassoProvider"
+66-->[com.squareup.picasso:picasso:2.71828] /home/ngatyah/.gradle/caches/transforms-2/files-2.1/0e4241badfc9a432682117a641c11080/jetified-picasso-2.71828/AndroidManifest.xml:9:13-64
+67            android:authorities="com.example.whatsapp.com.squareup.picasso"
+67-->[com.squareup.picasso:picasso:2.71828] /home/ngatyah/.gradle/caches/transforms-2/files-2.1/0e4241badfc9a432682117a641c11080/jetified-picasso-2.71828/AndroidManifest.xml:10:13-72
+68            android:exported="false" />
+68-->[com.squareup.picasso:picasso:2.71828] /home/ngatyah/.gradle/caches/transforms-2/files-2.1/0e4241badfc9a432682117a641c11080/jetified-picasso-2.71828/AndroidManifest.xml:11:13-37
+69
+70        <activity
+70-->[com.google.android.gms:play-services-base:16.0.1] /home/ngatyah/.gradle/caches/transforms-2/files-2.1/f302aef92586b31c5ebcda7998178b26/jetified-play-services-base-16.0.1/AndroidManifest.xml:23:9-26:75
+71            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+71-->[com.google.android.gms:play-services-base:16.0.1] /home/ngatyah/.gradle/caches/transforms-2/files-2.1/f302aef92586b31c5ebcda7998178b26/jetified-play-services-base-16.0.1/AndroidManifest.xml:24:13-79
+72            android:exported="false"
+72-->[com.google.android.gms:play-services-base:16.0.1] /home/ngatyah/.gradle/caches/transforms-2/files-2.1/f302aef92586b31c5ebcda7998178b26/jetified-play-services-base-16.0.1/AndroidManifest.xml:25:13-37
+73            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+73-->[com.google.android.gms:play-services-base:16.0.1] /home/ngatyah/.gradle/caches/transforms-2/files-2.1/f302aef92586b31c5ebcda7998178b26/jetified-play-services-base-16.0.1/AndroidManifest.xml:26:13-72
+74
+75        <provider
+75-->[com.google.firebase:firebase-common:16.0.3] /home/ngatyah/.gradle/caches/transforms-2/files-2.1/ca218ed0b2182e6502bc32587a2b7091/jetified-firebase-common-16.0.3/AndroidManifest.xml:10:9-14:39
+76            android:name="com.google.firebase.provider.FirebaseInitProvider"
+76-->[com.google.firebase:firebase-common:16.0.3] /home/ngatyah/.gradle/caches/transforms-2/files-2.1/ca218ed0b2182e6502bc32587a2b7091/jetified-firebase-common-16.0.3/AndroidManifest.xml:11:13-77
+77            android:authorities="com.example.whatsapp.firebaseinitprovider"
+77-->[com.google.firebase:firebase-common:16.0.3] /home/ngatyah/.gradle/caches/transforms-2/files-2.1/ca218ed0b2182e6502bc32587a2b7091/jetified-firebase-common-16.0.3/AndroidManifest.xml:12:13-72
+78            android:exported="false"
+78-->[com.google.firebase:firebase-common:16.0.3] /home/ngatyah/.gradle/caches/transforms-2/files-2.1/ca218ed0b2182e6502bc32587a2b7091/jetified-firebase-common-16.0.3/AndroidManifest.xml:13:13-37
+79            android:initOrder="100" />
+79-->[com.google.firebase:firebase-common:16.0.3] /home/ngatyah/.gradle/caches/transforms-2/files-2.1/ca218ed0b2182e6502bc32587a2b7091/jetified-firebase-common-16.0.3/AndroidManifest.xml:14:13-36
+80
+81        <meta-data
+81-->[com.google.android.gms:play-services-basement:16.1.0] /home/ngatyah/.gradle/caches/transforms-2/files-2.1/944f48392184cca9dd37b5c8d2c68e71/jetified-play-services-basement-16.1.0/AndroidManifest.xml:23:9-25:69
+82            android:name="com.google.android.gms.version"
+82-->[com.google.android.gms:play-services-basement:16.1.0] /home/ngatyah/.gradle/caches/transforms-2/files-2.1/944f48392184cca9dd37b5c8d2c68e71/jetified-play-services-basement-16.1.0/AndroidManifest.xml:24:13-58
+83            android:value="@integer/google_play_services_version" />
+83-->[com.google.android.gms:play-services-basement:16.1.0] /home/ngatyah/.gradle/caches/transforms-2/files-2.1/944f48392184cca9dd37b5c8d2c68e71/jetified-play-services-basement-16.1.0/AndroidManifest.xml:25:13-66
+84    </application>
+85
+86</manifest>

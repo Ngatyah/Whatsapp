@@ -4,7 +4,24 @@
             "outputFile": "/home/ngatyah/AndroidStudioProjects/Whatsapp/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ur/values-ur.xml",
             "map": [
                 {
-                    "source": "/home/ngatyah/.gradle/caches/transforms-2/files-2.1/f302aef92586b31c5ebcda7998178b26/jetified-play-services-base-16.0.1/res/values-ur/values.xml",
+                    "source": "/home/ngatyah/.gradle/caches/transforms-2/files-2.1/b171ade235f8df6f14928a072cb1b763/jetified-firebase-messaging-20.1.0/res/values-ur/values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "207",
+                        "endColumns": "101",
+                        "endOffsets": "308"
+                    },
+                    "to": {
+                        "startLines": "54",
+                        "startColumns": "4",
+                        "startOffsets": "6064",
+                        "endColumns": "105",
+                        "endOffsets": "6165"
+                    }
+                },
+                {
+                    "source": "/home/ngatyah/.gradle/caches/transforms-2/files-2.1/503246db64dcbb120c121745b36c75fd/play-services-base-17.0.0/res/values-ur/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -21,24 +38,7 @@
                     }
                 },
                 {
-                    "source": "/home/ngatyah/.gradle/caches/transforms-2/files-2.1/0215f50be6c9d5fa28d42502c7539481/android-image-cropper-2.8.0/res/values-ur/values-ur.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,159,212,269,344,425,502,567",
-                        "endColumns": "103,52,56,74,80,76,64,76",
-                        "endOffsets": "154,207,264,339,420,497,562,639"
-                    },
-                    "to": {
-                        "startLines": "47,48,49,50,51,52,53,54",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "5552,5656,5709,5766,5841,5922,5999,6064",
-                        "endColumns": "103,52,56,74,80,76,64,76",
-                        "endOffsets": "5651,5704,5761,5836,5917,5994,6059,6136"
-                    }
-                },
-                {
-                    "source": "/home/ngatyah/.gradle/caches/transforms-2/files-2.1/944f48392184cca9dd37b5c8d2c68e71/jetified-play-services-basement-16.1.0/res/values-ur/values.xml",
+                    "source": "/home/ngatyah/.gradle/caches/transforms-2/files-2.1/47a5249b1556b50957923e10e02459f9/jetified-play-services-basement-17.0.0/res/values-ur/values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -55,6 +55,23 @@
                     }
                 },
                 {
+                    "source": "/home/ngatyah/.gradle/caches/transforms-2/files-2.1/0215f50be6c9d5fa28d42502c7539481/android-image-cropper-2.8.0/res/values-ur/values-ur.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,159,212,269,344,425,502,567",
+                        "endColumns": "103,52,56,74,80,76,64,76",
+                        "endOffsets": "154,207,264,339,420,497,562,639"
+                    },
+                    "to": {
+                        "startLines": "47,48,49,50,51,52,53,55",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "5552,5656,5709,5766,5841,5922,5999,6170",
+                        "endColumns": "103,52,56,74,80,76,64,76",
+                        "endOffsets": "5651,5704,5761,5836,5917,5994,6059,6242"
+                    }
+                },
+                {
                     "source": "/home/ngatyah/.gradle/caches/transforms-2/files-2.1/16eb53875ba78320b1fcf5cac2c4c8c7/core-1.0.1/res/values-ur/values-ur.xml",
                     "from": {
                         "startLines": "2",
@@ -64,11 +81,11 @@
                         "endOffsets": "151"
                     },
                     "to": {
-                        "startLines": "56",
+                        "startLines": "57",
                         "startColumns": "4",
-                        "startOffsets": "6221",
+                        "startOffsets": "6327",
                         "endColumns": "100",
-                        "endOffsets": "6317"
+                        "endOffsets": "6423"
                     }
                 },
                 {
@@ -81,11 +98,11 @@
                         "endOffsets": "210,316,425,511,615,735,811,887,979,1073,1169,1263,1365,1459,1555,1649,1741,1833,1918,2026,2135,2237,2348,2448,2556,2721,2819,2899"
                     },
                     "to": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,55",
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,56",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,215,321,430,516,620,740,816,892,984,1078,1174,1268,1370,1464,1560,1654,1746,1838,1923,2031,2140,2242,2353,2453,2561,2726,6141",
+                        "startOffsets": "105,215,321,430,516,620,740,816,892,984,1078,1174,1268,1370,1464,1560,1654,1746,1838,1923,2031,2140,2242,2353,2453,2561,2726,6247",
                         "endColumns": "109,105,108,85,103,119,75,75,91,93,95,93,101,93,95,93,91,91,84,107,108,101,110,99,107,164,97,79",
-                        "endOffsets": "210,316,425,511,615,735,811,887,979,1073,1169,1263,1365,1459,1555,1649,1741,1833,1918,2026,2135,2237,2348,2448,2556,2721,2819,6216"
+                        "endOffsets": "210,316,425,511,615,735,811,887,979,1073,1169,1263,1365,1459,1555,1649,1741,1833,1918,2026,2135,2237,2348,2448,2556,2721,2819,6322"
                     }
                 }
             ]

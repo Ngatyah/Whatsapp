@@ -76,6 +76,8 @@ public class GroupChatActivity extends AppCompatActivity {
 
                 userMessageInput.setText("");
 
+
+
                 myScrollView.fullScroll(ScrollView.FOCUS_DOWN);
             }
         });
@@ -237,11 +239,15 @@ public class GroupChatActivity extends AppCompatActivity {
             String chatDate=(String) ((DataSnapshot)iterator.next()).getValue();
             String chatTime=(String) ((DataSnapshot)iterator.next()).getValue();
             String chatMessage=(String) ((DataSnapshot)iterator.next()).getValue();
+
             String chatName=(String) ((DataSnapshot)iterator.next()).getValue();
 
 
 
+
             displayTexMessages.append(chatName +": \n" + chatMessage + "\n" +chatTime  +"          "+ chatDate +"\n\n\n");
+
+
 
 
 

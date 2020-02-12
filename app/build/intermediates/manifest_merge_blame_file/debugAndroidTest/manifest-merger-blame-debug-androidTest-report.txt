@@ -3,35 +3,35 @@
 3    package="com.example.whatsapp.test" >
 4
 5    <uses-sdk
-5-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger2617354608275228540.xml:5:5-74
+5-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger6165807299776274863.xml:5:5-74
 6        android:minSdkVersion="19"
-6-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger2617354608275228540.xml:5:15-41
+6-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger6165807299776274863.xml:5:15-41
 7        android:targetSdkVersion="29" />
-7-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger2617354608275228540.xml:5:42-71
+7-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger6165807299776274863.xml:5:42-71
 8
 9    <instrumentation
-9-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger2617354608275228540.xml:11:5-15:70
+9-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger6165807299776274863.xml:11:5-15:70
 10        android:name="androidx.test.runner.AndroidJUnitRunner"
-10-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger2617354608275228540.xml:11:22-76
+10-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger6165807299776274863.xml:11:22-76
 11        android:functionalTest="false"
-11-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger2617354608275228540.xml:14:22-52
+11-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger6165807299776274863.xml:14:22-52
 12        android:handleProfiling="false"
-12-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger2617354608275228540.xml:13:22-53
+12-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger6165807299776274863.xml:13:22-53
 13        android:label="Tests for com.example.whatsapp"
-13-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger2617354608275228540.xml:15:22-68
+13-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger6165807299776274863.xml:15:22-68
 14        android:targetPackage="com.example.whatsapp" />
-14-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger2617354608275228540.xml:12:22-66
+14-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger6165807299776274863.xml:12:22-66
 15
 16    <uses-permission android:name="android.permission.REORDER_TASKS" />
 16-->[androidx.test:core:1.1.0] /home/ngatyah/.gradle/caches/transforms-2/files-2.1/38c1a3bfe1d1335627c6d35312d4e180/core-1.1.0/AndroidManifest.xml:24:5-72
 16-->[androidx.test:core:1.1.0] /home/ngatyah/.gradle/caches/transforms-2/files-2.1/38c1a3bfe1d1335627c6d35312d4e180/core-1.1.0/AndroidManifest.xml:24:22-69
 17
 18    <application android:debuggable="true" >
-18-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger2617354608275228540.xml:7:5-9:19
-18-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger2617354608275228540.xml:7:18-43
+18-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger6165807299776274863.xml:7:5-9:19
+18-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger6165807299776274863.xml:7:18-43
 19        <uses-library android:name="android.test.runner" />
-19-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger2617354608275228540.xml:8:9-60
-19-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger2617354608275228540.xml:8:23-57
+19-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger6165807299776274863.xml:8:9-60
+19-->/home/ngatyah/AndroidStudioProjects/Whatsapp/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger6165807299776274863.xml:8:23-57
 20
 21        <activity
 21-->[androidx.test:core:1.1.0] /home/ngatyah/.gradle/caches/transforms-2/files-2.1/38c1a3bfe1d1335627c6d35312d4e180/core-1.1.0/AndroidManifest.xml:27:9-33:20

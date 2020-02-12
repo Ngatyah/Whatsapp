@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
@@ -83,34 +84,80 @@ public class ContactsFragment extends Fragment
             {
                 String userIDs= getRef(i).getKey();
 
-                usersRef.child(userIDs).addValueEventListener(new ValueEventListener() {
+                usersRef.child(userIDs).addValueEventListener(new ValueEventListener()
+                {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot)
                     {
-                        if(dataSnapshot.hasChild("image"))
+                        if(dataSnapshot.exists())
                         {
-                            String userImage = dataSnapshot.child("image").getValue().toString();
-                            String userStatus = dataSnapshot.child("status").getValue().toString();
-                            String userName = dataSnapshot.child("name").getValue().toString();
+                            if(dataSnapshot.child("userState").hasChild("status"))
+                            {
+                                String status =dataSnapshot.child("userState").child("status").getValue().toString();
+                                String date =dataSnapshot.child("userState").child("date").getValue().toString();
+                                String time =dataSnapshot.child("userState").child("time").getValue().toString();
+
+
+                                if(status.equals("Online"))
+                                {
+                                    contactsViewHolder.offlineIcon.setVisibility(View.INVISIBLE);
+                                    contactsViewHolder.onlineIcon.setVisibility(View.VISIBLE);
+
+
+                                }
+                                else if(status.equals("Offline"))
+                                {
+
+
+                                    contactsViewHolder.onlineIcon.setVisibility(View.INVISIBLE);
+                                    contactsViewHolder.offlineIcon.setVisibility(View.VISIBLE);
+
+
+                                }
+                            }
+                            else
+                            {
+
+
+                                contactsViewHolder.onlineIcon.setVisibility(View.INVISIBLE);
+                                contactsViewHolder.offlineIcon.setVisibility(View.VISIBLE);
+
+
+                            }
 
 
 
-                            contactsViewHolder.profileName.setText(userName);
-                            contactsViewHolder.profileStatus.setText(userStatus);
-
-                            Picasso.get().load(userImage).into(contactsViewHolder.profileImage);
 
 
+                            if(dataSnapshot.hasChild("image"))
+                            {
+                                final String userImage = dataSnapshot.child("image").getValue().toString();
+                                String userStatus = dataSnapshot.child("status").getValue().toString();
+                                String userName = dataSnapshot.child("name").getValue().toString();
 
-                        }
-                        else
-                        {
-                            String userStatus= dataSnapshot.child("status").getValue().toString();
-                            String userName = dataSnapshot.child("name").getValue().toString();
 
 
-                            contactsViewHolder.profileName.setText(userName);
-                            contactsViewHolder.profileStatus.setText(userStatus);
+                                contactsViewHolder.profileName.setText(userName);
+                                contactsViewHolder.profileStatus.setText(userStatus);
+
+                                Picasso.get().load(userImage).placeholder(R.drawable.profile_image).into(contactsViewHolder.profileImage);
+
+
+
+
+                            }
+                            else
+                            {
+                                String userStatus= dataSnapshot.child("status").getValue().toString();
+                                String userName = dataSnapshot.child("name").getValue().toString();
+
+
+                                contactsViewHolder.profileName.setText(userName);
+                                contactsViewHolder.profileStatus.setText(userStatus);
+                            }
+
+
+
                         }
 
                     }
@@ -147,6 +194,7 @@ public class ContactsFragment extends Fragment
 
         TextView profileName,profileStatus;
         CircleImageView profileImage;
+        ImageView onlineIcon,offlineIcon;
 
 
         public ContactsViewHolder(@NonNull View itemView)
@@ -156,6 +204,8 @@ public class ContactsFragment extends Fragment
             profileImage= itemView.findViewById(R.id.user_profile_image);
             profileName= itemView.findViewById(R.id.user_profile_name);
            profileStatus = itemView.findViewById(R.id.user_status);
+           onlineIcon = itemView.findViewById(R.id.user_online_status);
+           offlineIcon = itemView.findViewById(R.id.user_offline_status);
         }
     }
 }

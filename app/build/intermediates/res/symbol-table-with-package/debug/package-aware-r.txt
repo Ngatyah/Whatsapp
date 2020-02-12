@@ -1108,12 +1108,15 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable offline
 drawable online
 drawable password
 drawable phone
 drawable profile_activity
 drawable profile_image
+drawable receiver_message_layout
 drawable send_message
+drawable sender_messages_layerout
 drawable signup_photo
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -1266,6 +1269,7 @@ id main_tabs_pager
 id masked
 id media_actions
 id message
+id message_profile_pic
 id middle
 id mini
 id mtrl_child_content_container
@@ -1304,6 +1308,7 @@ id private_send_message_button
 id progress_circular
 id progress_horizontal
 id radio
+id receiver_message_TextView
 id rectangle
 id register_button
 id register_email
@@ -1335,6 +1340,7 @@ id select_dialog_listview
 id selected
 id send_message_button
 id send_verification_button
+id sender_message_TextView
 id set_profile_image
 id set_status
 id set_username
@@ -1392,6 +1398,7 @@ id unlabeled
 id up
 id update_setting_button
 id useLogo
+id user_offline_status
 id user_online_status
 id user_profile_image
 id user_profile_name
@@ -1468,6 +1475,7 @@ layout activity_settings
 layout app_bar_layout
 layout crop_image_activity
 layout crop_image_view
+layout custom_messages_layout
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
 layout design_layout_snackbar
@@ -1585,6 +1593,7 @@ string crop_image_menu_rotate_right
 string default_web_client_id
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
+string fcm_fallback_notification_channel_label
 string firebase_database_url
 string gcm_defaultSenderId
 string google_api_key

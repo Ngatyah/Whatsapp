@@ -20,6 +20,9 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthProvider;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.iid.FirebaseInstanceId;
 
 import java.util.concurrent.TimeUnit;
 
@@ -32,6 +35,7 @@ public class Phone_Login_Activity extends AppCompatActivity {
     private String mVerificationId;
     private PhoneAuthProvider.ForceResendingToken  mResendToken;
     private FirebaseAuth mAuth;
+    private DatabaseReference userRef;
     private ProgressDialog loadingBar;
 
     @Override
@@ -44,6 +48,7 @@ public class Phone_Login_Activity extends AppCompatActivity {
        phoneNumberInput=(EditText)findViewById(R.id.phone_input);
        verificationCodeInput=(EditText)findViewById(R.id.verification_code_input);
        mAuth=FirebaseAuth.getInstance();
+        userRef = FirebaseDatabase.getInstance().getReference();
        Context context;
        loadingBar= new ProgressDialog(this);
 
@@ -96,10 +101,10 @@ public class Phone_Login_Activity extends AppCompatActivity {
                sendVerificationCodeButton.setVisibility(View.INVISIBLE);
                phoneNumberInput.setVisibility(View.INVISIBLE);
 
-               String verifiactionCode= verificationCodeInput.getText().toString();
+               String verificationCode= verificationCodeInput.getText().toString();
 
 
-               if(TextUtils.isEmpty(verifiactionCode))
+               if(TextUtils.isEmpty(verificationCode))
                {
                    Toast.makeText(Phone_Login_Activity.this,"Enter The Code First",Toast.LENGTH_SHORT).show();
 
@@ -112,8 +117,10 @@ public class Phone_Login_Activity extends AppCompatActivity {
                    loadingBar.show();
 
 
-                   PhoneAuthCredential credential = PhoneAuthProvider.getCredential(mVerificationId, verifiactionCode);
+                   PhoneAuthCredential credential = PhoneAuthProvider.getCredential(mVerificationId, verificationCode);
                    signInWithPhoneAuthCredential(credential);
+
+
                }
 
 
@@ -180,9 +187,23 @@ public class Phone_Login_Activity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful())
                         {
-                            loadingBar.dismiss();
-                            Toast.makeText(Phone_Login_Activity.this,"Welcome Your Are Logged In",Toast.LENGTH_SHORT).show();
-                            sendUserToMainActivity();
+                            String currentUserID = mAuth.getCurrentUser().getUid();
+                            String deviceToken = FirebaseInstanceId.getInstance().getToken();
+                            userRef.child("Users").child(currentUserID).child("device_token").setValue(deviceToken).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                @Override
+                                public void onComplete(@NonNull Task<Void> task)
+                                {
+                                    if(task.isSuccessful())
+                                    {
+                                        loadingBar.dismiss();
+                                        Toast.makeText(Phone_Login_Activity.this,"Welcome Your Are Logged In",Toast.LENGTH_SHORT).show();
+                                        sendUserToMainActivity();
+                                    }
+
+                                }
+                            });
+
+
                         }
                         else
                         {

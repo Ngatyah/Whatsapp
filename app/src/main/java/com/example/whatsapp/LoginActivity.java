@@ -18,6 +18,9 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.iid.FirebaseInstanceId;
 
 public class LoginActivity extends AppCompatActivity
 {
@@ -28,6 +31,7 @@ public class LoginActivity extends AppCompatActivity
     private TextView newAccount, forgetPassword;
     private FirebaseAuth myAuth;
     private ProgressDialog loadingBar;
+    private DatabaseReference userRef;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +40,7 @@ public class LoginActivity extends AppCompatActivity
 
         InitializeField();
         myAuth= FirebaseAuth.getInstance();
+        userRef = FirebaseDatabase.getInstance().getReference();
 
 
 
@@ -104,9 +109,26 @@ public class LoginActivity extends AppCompatActivity
                     {
                         if(task.isSuccessful())
                         {
-                            sendUserToMainActivity();
-                            Toast.makeText(LoginActivity.this,"Logged In Successfully",Toast.LENGTH_SHORT).show();
-                            loadingBar.dismiss();
+                            String currentUserID = myAuth.getCurrentUser().getUid();
+                            String deviceToken = FirebaseInstanceId.getInstance().getToken();
+
+                            userRef.child("Users").child(currentUserID).child("device_token").setValue(deviceToken).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                @Override
+                                public void onComplete(@NonNull Task<Void> task)
+                                {
+                                    if(task.isSuccessful())
+                                    {
+                                        sendUserToMainActivity();
+                                        Toast.makeText(LoginActivity.this,"Logged In Successfully",Toast.LENGTH_SHORT).show();
+                                        loadingBar.dismiss();
+                                    }
+
+                                }
+                            });
+
+
+
+
 
                         }
                         else

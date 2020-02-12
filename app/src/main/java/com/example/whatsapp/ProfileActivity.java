@@ -19,6 +19,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
+import java.util.HashMap;
+
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class ProfileActivity extends AppCompatActivity {
@@ -28,7 +30,7 @@ public class ProfileActivity extends AppCompatActivity {
     private TextView visitUserName,visitUserProfileStatus;
     private Button sendMsgRequest, decline_message_request_Button;
 
-    private DatabaseReference visitRef,chatRequestRef,contactRef;
+    private DatabaseReference visitRef,chatRequestRef,contactRef,notificationRef;
     private FirebaseAuth MyAuth;
 
 
@@ -45,6 +47,7 @@ public class ProfileActivity extends AppCompatActivity {
         visitRef= FirebaseDatabase.getInstance().getReference().child("Users");
         chatRequestRef= FirebaseDatabase.getInstance().getReference().child("Chat Requests");
         contactRef= FirebaseDatabase.getInstance().getReference().child("Contacts");
+        notificationRef= FirebaseDatabase.getInstance().getReference().child("Notifications");
         MyAuth=FirebaseAuth.getInstance();
 
 
@@ -322,6 +325,7 @@ public class ProfileActivity extends AppCompatActivity {
                         {
                             if(task.isSuccessful())
                             {
+                                notificationRef.child(receiveUserId).removeValue();
                                 sendMsgRequest.setEnabled(true);
                                 current_State="new";
                                 sendMsgRequest.setText("Send Chat Message");
@@ -348,6 +352,7 @@ public class ProfileActivity extends AppCompatActivity {
             {
                if(task.isSuccessful())
                {
+
                    chatRequestRef.child(receiveUserId).child(senderUserId).child("request_type")
                            .setValue("received").addOnCompleteListener(new OnCompleteListener<Void>() {
                        @Override
@@ -355,9 +360,32 @@ public class ProfileActivity extends AppCompatActivity {
                        {
                            if(task.isSuccessful())
                            {
-                               sendMsgRequest.setEnabled(true);
-                               current_State="request_sent";
-                               sendMsgRequest.setText("Cancel Request");
+
+                               HashMap<String, String>chatNotification = new HashMap<>();
+                               chatNotification.put("from",senderUserId);
+                               chatNotification.put("type","request");
+
+
+                               notificationRef.child(receiveUserId).push().setValue(chatNotification)
+                               .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                   @Override
+                                   public void onComplete(@NonNull Task<Void> task)
+                                   {
+                                       if(task.isSuccessful())
+                                       {
+                                           sendMsgRequest.setEnabled(true);
+                                           current_State="request_sent";
+                                           sendMsgRequest.setText("Cancel Request");
+
+                                       }
+
+                                   }
+                               });
+
+
+
+
+
                            }
 
                        }

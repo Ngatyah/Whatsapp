@@ -27,6 +27,10 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.HashMap;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -37,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
     private FirebaseUser currentUser;
     private FirebaseAuth myAuth;
     private DatabaseReference rootRef;
+    private String currentUserID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
         myAuth=FirebaseAuth.getInstance();
         currentUser=myAuth.getCurrentUser();
         rootRef=FirebaseDatabase.getInstance().getReference();
+        currentUserID = myAuth.getCurrentUser().getUid();
 
         mToolbar=(Toolbar)findViewById(R.id.main_page_toolbar);
         setSupportActionBar(mToolbar);
@@ -72,13 +78,38 @@ public class MainActivity extends AppCompatActivity {
 
         }
         else
-            {
-              verifyUserExistence();
-            }
+        {
+            UpdateUserStatus("Online");
+            verifyUserExistence();
+        }
     }
 
+    @Override
+    protected void onStop()
+    {
+
+        super.onStop();
+        if(currentUser !=null)
+        {
+            UpdateUserStatus("Offline");
+
+        }
+
+    }
+
+    @Override
+    protected void onDestroy()
+    {
+        super.onDestroy();
+
+        if(currentUser !=null)
+        {
+            UpdateUserStatus("Offline");
+
+        }
 
 
+    }
 
     private void verifyUserExistence()
 
@@ -237,6 +268,36 @@ public class MainActivity extends AppCompatActivity {
     {
         Intent findFreindsInent= new Intent(MainActivity.this,FindFriendsActivity.class);
         startActivity(findFreindsInent);
+
+
+    }
+
+
+
+
+    private void UpdateUserStatus(String status)
+    {
+        String saveCurrentTime, saveCurrentDate;
+
+        Calendar callForDate = Calendar.getInstance();
+        SimpleDateFormat currentDateFormat = new SimpleDateFormat("MMM dd, yyyy" );
+
+        saveCurrentDate =currentDateFormat.format(callForDate.getTime());
+
+        Calendar callForTime = Calendar.getInstance();
+        SimpleDateFormat currentTimeFormat = new SimpleDateFormat("hh:mm a");
+
+        saveCurrentTime=currentTimeFormat.format(callForTime.getTime());
+
+
+        HashMap<String, Object>CurrentStateMap = new HashMap<>();
+        CurrentStateMap.put("time",saveCurrentTime);
+        CurrentStateMap.put("date",saveCurrentDate);
+        CurrentStateMap.put("status",status);
+
+
+        rootRef.child("Users").child(currentUserID).child("userState").updateChildren(CurrentStateMap);
+
 
 
     }

@@ -1,4 +1,4 @@
-#Wed Feb 05 07:48:08 EAT 2020
+#Tue Feb 11 21:32:39 EAT 2020
 base.0=/home/ngatyah/AndroidStudioProjects/Whatsapp/app/build/intermediates/dex/debug/mergeDexDebug/out/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

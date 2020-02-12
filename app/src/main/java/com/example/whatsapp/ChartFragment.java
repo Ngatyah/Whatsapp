@@ -1,6 +1,7 @@
 package com.example.whatsapp;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -22,6 +23,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -83,9 +87,18 @@ public class ChartFragment extends Fragment
             @Override
             protected void onBindViewHolder(@NonNull final ChatViewHolder chatViewHolder, int i, @NonNull Contacts contacts)
             {
+                Calendar callForDate = Calendar.getInstance();
+                SimpleDateFormat currentDateFormat = new SimpleDateFormat("MMM dd, yyyy" );
+
+                final String currentDate=currentDateFormat.format(callForDate.getTime());
+
+                Calendar callForTime = Calendar.getInstance();
+                SimpleDateFormat currentTimeFormat = new SimpleDateFormat("hh:mm a");
+
+               String currentTime=currentTimeFormat.format(callForTime.getTime());
+
 
                 final String usersIDs= getRef(i).getKey();
-                final String[] chatImage={"default"};
 
                 usersRef.child(usersIDs).addValueEventListener(new ValueEventListener() {
                     @Override
@@ -95,17 +108,60 @@ public class ChartFragment extends Fragment
 
                         if(dataSnapshot.hasChild("image"))
                         {
-                            chatImage[0]= dataSnapshot.child("image").getValue().toString();
+                            final String chatImage  = dataSnapshot.child("image").getValue().toString();
 
-                           Picasso.get().load(chatImage[0]).into(chatViewHolder.privateChatProfileImage);
+                           Picasso.get().load(chatImage).into(chatViewHolder.privateChatProfileImage);
                         }
+
+                      if(dataSnapshot.child("userState").hasChild("status"))
+                      {
+                            String status =dataSnapshot.child("userState").child("status").getValue().toString();
+                            String date =dataSnapshot.child("userState").child("date").getValue().toString();
+                            String time =dataSnapshot.child("userState").child("time").getValue().toString();
+
+
+                            if(status.equals("Online"))
+                            {
+                                chatViewHolder.privatechatStatus.setText("Online");
+
+
+                            }
+                            else if(status.equals("Offline"))
+                            {
+                                if(date.equals(currentDate))
+
+                                    chatViewHolder.privatechatStatus.setText("Last Seen" + "\n"+ time);
+
+
+                                else
+                                {
+                                    chatViewHolder.privatechatStatus.setText("Last Seen" + "\n"+date +"  "+ time);
+
+
+                                }
+
+                            }
+                      }
+
+
+                      else
+                      {
+                          chatViewHolder.privatechatStatus.setText("Offline");
+
+                       }
+
+                        final String chatImage  = dataSnapshot.child("image").getValue().toString();
+
+                        Picasso.get().load(chatImage).into(chatViewHolder.privateChatProfileImage);
 
                         final String chatUserName = dataSnapshot.child("name").getValue().toString();
                         final String chatStatus = dataSnapshot.child("status").getValue().toString();
 
 
+                        final Uri myUri = Uri.parse(chatImage);
+
+
                         chatViewHolder.privateChatUserName.setText(chatUserName);
-                        chatViewHolder.privatechatStatus.setText("Last Seen: " + "\n"+"Date:" +"         "+ "Time:");
                         chatViewHolder.itemView.setOnClickListener(new View.OnClickListener()
                         {
                             @Override
@@ -113,9 +169,14 @@ public class ChartFragment extends Fragment
                             {
                                 Intent chatIntent = new Intent(getContext(),ChatActivity.class);
                                 chatIntent.putExtra("UserName",chatUserName);
-                                chatIntent.putExtra("UserImage",chatImage);
+                                chatIntent.putExtra("UserImage", myUri);
                                 chatIntent.putExtra("UserIDs", usersIDs);
                                 startActivity(chatIntent);
+
+
+//                                Toast.makeText(getContext(), chatImage + "\n"+ chatUserName, Toast.LENGTH_SHORT).show();
+
+
 
 
                             }

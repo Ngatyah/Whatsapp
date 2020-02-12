@@ -6,6 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".Phone_Login_Activity">
 
+    <include
+        android:id="@+id/private_chat_toolbar"
+        layout="@layout/app_bar_layout"
+        ></include>
+
     <EditText
         android:id="@+id/phone_input"
         android:layout_width="match_parent"

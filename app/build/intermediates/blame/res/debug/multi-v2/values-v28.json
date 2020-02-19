@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/ngatyah/AndroidStudioProjects/Whatsapp/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v28/values-v28.xml",
+            "outputFile": "/Users/brck_dev/Desktop/ngatyah/whatsapp/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v28/values-v28.xml",
             "map": [
                 {
-                    "source": "/home/ngatyah/.gradle/caches/transforms-2/files-2.1/daee6df2c31aab579f82be9a195199ab/appcompat-1.0.2/res/values-v28/values-v28.xml",
+                    "source": "/Users/brck_dev/.gradle/caches/transforms-2/files-2.1/daee6df2c31aab579f82be9a195199ab/appcompat-1.0.2/res/values-v28/values-v28.xml",
                     "from": {
                         "startLines": "2,3,4,8",
                         "startColumns": "4,4,4,4",

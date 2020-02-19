@@ -1,27 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/ngatyah/AndroidStudioProjects/Whatsapp/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-fr/values-fr.xml",
+            "outputFile": "/Users/brck_dev/Desktop/ngatyah/whatsapp/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-fr/values-fr.xml",
             "map": [
                 {
-                    "source": "/home/ngatyah/.gradle/caches/transforms-2/files-2.1/16eb53875ba78320b1fcf5cac2c4c8c7/core-1.0.1/res/values-fr/values-fr.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "58",
-                        "startColumns": "4",
-                        "startOffsets": "6623",
-                        "endColumns": "100",
-                        "endOffsets": "6719"
-                    }
-                },
-                {
-                    "source": "/home/ngatyah/.gradle/caches/transforms-2/files-2.1/47a5249b1556b50957923e10e02459f9/jetified-play-services-basement-17.0.0/res/values-fr/values.xml",
+                    "source": "/Users/brck_dev/.gradle/caches/transforms-2/files-2.1/1286259c6cb4472d0ebc9adf344653ce/jetified-play-services-basement-17.0.0/res/values-fr/values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -38,24 +21,41 @@
                     }
                 },
                 {
-                    "source": "/home/ngatyah/.gradle/caches/transforms-2/files-2.1/0215f50be6c9d5fa28d42502c7539481/android-image-cropper-2.8.0/res/values-fr/values-fr.xml",
+                    "source": "/Users/brck_dev/.gradle/caches/transforms-2/files-2.1/2db170b864490af3d847670992cbd2b2/jetified-firebase-messaging-20.1.0/res/values-fr/values.xml",
                     "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10",
-                        "startColumns": "4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,165,212,276,335,423,507,580,654",
-                        "endColumns": "109,46,63,58,87,83,72,73,82",
-                        "endOffsets": "160,207,271,330,418,502,575,649,732"
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "207",
+                        "endColumns": "100",
+                        "endOffsets": "307"
                     },
                     "to": {
-                        "startLines": "47,48,49,50,51,52,53,54,56",
-                        "startColumns": "4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "5750,5860,5907,5971,6030,6118,6202,6275,6454",
-                        "endColumns": "109,46,63,58,87,83,72,73,82",
-                        "endOffsets": "5855,5902,5966,6025,6113,6197,6270,6344,6532"
+                        "startLines": "55",
+                        "startColumns": "4",
+                        "startOffsets": "6349",
+                        "endColumns": "104",
+                        "endOffsets": "6449"
                     }
                 },
                 {
-                    "source": "/home/ngatyah/.gradle/caches/transforms-2/files-2.1/503246db64dcbb120c121745b36c75fd/play-services-base-17.0.0/res/values-fr/values.xml",
+                    "source": "/Users/brck_dev/.gradle/caches/transforms-2/files-2.1/16eb53875ba78320b1fcf5cac2c4c8c7/core-1.0.1/res/values-fr/values-fr.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "58",
+                        "startColumns": "4",
+                        "startOffsets": "6623",
+                        "endColumns": "100",
+                        "endOffsets": "6719"
+                    }
+                },
+                {
+                    "source": "/Users/brck_dev/.gradle/caches/transforms-2/files-2.1/503246db64dcbb120c121745b36c75fd/play-services-base-17.0.0/res/values-fr/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -72,7 +72,7 @@
                     }
                 },
                 {
-                    "source": "/home/ngatyah/.gradle/caches/transforms-2/files-2.1/daee6df2c31aab579f82be9a195199ab/appcompat-1.0.2/res/values-fr/values-fr.xml",
+                    "source": "/Users/brck_dev/.gradle/caches/transforms-2/files-2.1/daee6df2c31aab579f82be9a195199ab/appcompat-1.0.2/res/values-fr/values-fr.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -89,20 +89,20 @@
                     }
                 },
                 {
-                    "source": "/home/ngatyah/.gradle/caches/transforms-2/files-2.1/b171ade235f8df6f14928a072cb1b763/jetified-firebase-messaging-20.1.0/res/values-fr/values.xml",
+                    "source": "/Users/brck_dev/.gradle/caches/transforms-2/files-2.1/0215f50be6c9d5fa28d42502c7539481/android-image-cropper-2.8.0/res/values-fr/values-fr.xml",
                     "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "207",
-                        "endColumns": "100",
-                        "endOffsets": "307"
+                        "startLines": "2,3,4,5,6,7,8,9,10",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,165,212,276,335,423,507,580,654",
+                        "endColumns": "109,46,63,58,87,83,72,73,82",
+                        "endOffsets": "160,207,271,330,418,502,575,649,732"
                     },
                     "to": {
-                        "startLines": "55",
-                        "startColumns": "4",
-                        "startOffsets": "6349",
-                        "endColumns": "104",
-                        "endOffsets": "6449"
+                        "startLines": "47,48,49,50,51,52,53,54,56",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "5750,5860,5907,5971,6030,6118,6202,6275,6454",
+                        "endColumns": "109,46,63,58,87,83,72,73,82",
+                        "endOffsets": "5855,5902,5966,6025,6113,6197,6270,6344,6532"
                     }
                 }
             ]

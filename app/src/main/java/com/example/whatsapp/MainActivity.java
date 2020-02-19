@@ -8,6 +8,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
@@ -51,7 +52,9 @@ public class MainActivity extends AppCompatActivity {
         myAuth=FirebaseAuth.getInstance();
         currentUser=myAuth.getCurrentUser();
         rootRef=FirebaseDatabase.getInstance().getReference();
+        Log.d("begin_TOKEN", "------->");
         currentUserID = myAuth.getCurrentUser().getUid();
+        Log.d("end_TOKEN", currentUserID);
 
         mToolbar=(Toolbar)findViewById(R.id.main_page_toolbar);
         setSupportActionBar(mToolbar);
